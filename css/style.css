@@ -1,54 +1,54 @@
 /***** STARTER CODE - DO NOT CHANGE *****/
 html{
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color: #737373;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+background-color: #737373;
+font-size: 18px;
+margin: 0;
+padding: 0;
 }
 
 h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
+font-size: 50px;
+line-height: 1;
+padding: 50px 0;
+text-align: center;
 }
 
 h2{
-  font-size: 32px;
-  line-height: 1.5;
+font-size: 32px;
+line-height: 1.5;
 }
 
 nav ul{
-  list-style-type: none;
+list-style-type: none;
 }
 
 nav li{
-  display: inline;
-  padding-right: 20px;
+display: inline;
+padding-right: 20px;
 }
 
 nav{
-  background-color: #ddd;
-  padding: 25px 0;
-  text-align: left;
+background-color: #ddd;
+padding: 25px 0;
+text-align: left;
 }
 
 header p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
+color: white;
+font-size: 24px;
+padding: 0 100px;
+text-align: center;
 }
 
 footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
-  text-align: center;
+background-color: black;
+color: white;
+padding-top: 30px;
+text-align: center;
 }
 
 
@@ -56,89 +56,82 @@ footer{
 
 /*****  End Starter Code ****/
 
+
 nav a{
   color: black;
   font-weight: bold;
+  text-decoration: none;
   /* Requirement 1 code here*/
 }
 
-a:link {
+
+nav a:visited{
   text-decoration: none;
 }
-
-a:visited {
-  text-decoration: none;
-}
-
   /* Requirement 2 code here*/
 
-a:hover {
-  text-decoration: underline;
+nav a:hover{
+    text-decoration: underline;
   }
 
+nav a:active {
+    text-decoration: none;
+}
 
 .skip a{
-  background: white;
-  left: 0;
   padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: white;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: absolute;
-  top: 40px;
-  visibility: hidden;
-
-  /* Requirement 3a code here*/
-
-}
+  }
 
 /* Requirement 3b code here*/
-a:focus {
-  position: absolute;
-  visibility: visible;
-}
 
-*:focus {
-  border: 2px;
+.skip a:focus{
+  position: absolute;
+  top: 40px;
 }
 
 
 /* Requirement 4 code here*/
 
-
+*:focus{
+  border: 2px solid;
+}
 
 .container{
-  /* Requirement 5 code here*/
+    /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: repeat(5, auto);
   row-gap: 15px;
 
-}
+  }
 
-/* Remainder of requirements here: */
+  /* Remainder of requirements here: */
 
-#main{
-  background-image: url("../images/header.jpg");
-  height: 400px; /* Parallax effect */
-  background-attachment: fixed; /* Parallax effect */
-  background-position: center; /* Parallax effect */
-  background-repeat: no-repeat;
-  background-size: cover; /* Parallax effect */
-  color: white;
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 1;
-
-
-  /* YOUR CODE HERE; */
-}
-
+  #main{
+    background-image: url("../images/header.jpg");
+    height: 400px; /* Parallax effect */
+    background-attachment: fixed; /* Parallax effect */
+    background-position: center; /* Parallax effect */
+    background-repeat: no-repeat;
+    background-size: cover; /* Parallax effect */
+    color: white;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+  }
 
 
 .about-image{
   grid-column: 1/span 3;
-  max-height: 700px;
   grid-row: 2/span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .about{
@@ -148,8 +141,9 @@ a:focus {
 
 .method-image{
   grid-column: 1/span 3;
-  max-height: 700px;
   grid-row: 3/span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .method{
@@ -157,29 +151,32 @@ a:focus {
   grid-row: 3/span 1;
 }
 
-/* You need to write some of your own selectors here */
-
 .clients-image{
   grid-column: 1/span 3;
-  max-height: 700px;
   grid-row: 4/span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .clients{
-  grid-column: 3/span 2;
+  grid-column: 2/span 1;
   grid-row: 4/span 1;
 }
 
 .contact-image{
-  grid-column: 3/span 2;
-  max-height: 700px;
+  grid-column: 1/span 3;
   grid-row: 5/span 1;
+  max-height: 700px;
+  overflow: hidden;
 }
 
 .contact{
   grid-column: 2/span 1;
   grid-row: 5/span 1;
 }
+
+/* You need to write some of your own selectors here */
+
 
 
 .text-block{
@@ -197,59 +194,45 @@ a:focus {
   nav{
     padding: 30px 0;
     text-align: right;
+
     /* Your code here */
   }
 
   .container{
-    display: grid;
     grid-template-columns: 50px, auto, 500px, auto, 50px;
     grid-template-rows: repeat(5, 400px);
   }
 
-  
-
   .about-image{
-    grid-column: 1/span 3;
-    max-height: 700px;
-    grid-row: 2/span 1;
+    grid-column: 2/span 2;
   }
 
   .about{
     grid-column: 3/span 2;
-    grid-row: 2/span 1;
   }
 
   .method-image{
     grid-column: 3/span 2;
-    max-height: 700px;
-    grid-row: 3/span 1;
   }
 
   .method{
-    grid-column: 2/span 1;
-    grid-row: 3/span 1;
+    grid-column: 2/span 2;
   }
 
   .clients-image{
-    grid-column: 1/span 3;
-    max-height: 700px;
-    grid-row: 4/span 1;
+    grid-column: 2/span 2;
   }
 
   .clients{
     grid-column: 3/span 2;
-    grid-row: 4/span 1;
   }
 
   .contact-image{
     grid-column: 3/span 2;
-    max-height: 700px;
-    grid-row: 5/span 1;
   }
 
- .contact{
-    grid-column: 2/span 1;
-    grid-row: 5/span 1;
+  .contact{
+    grid-column: 2/span 2;
   }
 
 }
